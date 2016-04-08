@@ -1,0 +1,18 @@
+<h1>Submit a Phone OS</h1>
+<div>
+  <%= form_for @os do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.submit "Submit" %>
+    <% end %>
+  </div>
+<ul>
+  <% @operating_systems.each do |os| %>
+    <li>
+      <%= os.name %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Add Phone", new_phone_path %>

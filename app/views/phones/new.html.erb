@@ -1,0 +1,24 @@
+<h1>Add a Phone</h1>
+
+<%= form_for [@operating_system, @phone] do |f| %>
+  <%= f.label :manufacturer %>
+  <%= f.text_field :manufacturer %>
+
+  <%= f.label :screen_size, "Screen Size" %>
+  <%= f.text_field :screen_size %>
+
+  <%= f.label :operating_system, "OS" %>
+  <%= f.select(:operating_system , options_for_select(@os_collection)) %>
+
+
+  <%= f.label :charging_port, "Charging Port" %>
+  <%= f.text_field :charging_port %>
+
+  <%= f.label :name, "Model Name" %>
+  <%= f.text_field :name %>
+
+  <%= f.label :quantity %>
+  <%= f.text_field :quantity %>
+
+  <%= f.submit "Submit" %>
+<% end %>

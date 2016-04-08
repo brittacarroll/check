@@ -1,0 +1,12 @@
+<% @phones.each do |phone| %>
+  <%= phone.name %> , <%= phone.manufacturer %>
+  <%= phone.quantity %>
+  <% if phone.in_stock? %>
+    In stock
+  <% else %>
+    Not available
+  <% end %>
+<% end %>
+
+
+<%= link_to "Add Phone", new_phone_path %>
